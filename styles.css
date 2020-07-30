@@ -1,17 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Share+Tech+Mono&display=swap");
 
-.container {
+/* Global styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Share Tech Mono", monospace;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: #e7e7e7;
+  background: rgb(19, 19, 19);
+}
+
+section {
   height: 100vh;
   display: grid;
   place-items: center;
 }
 
 .btn {
-  margin: 0 9px;
+  /* margin: 0 9px; */
   background: rgba(3, 155, 155);
   border-radius: 2rem;
   color: #fafafa;
   display: inline-block;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   padding: 1rem 2.5rem;
   text-transform: uppercase;
   transition: background-color 650ms;
@@ -35,7 +53,7 @@ ul {
 }
 
 #side-bar {
-  width: 24rem;
+  width: 15rem;
   height: 100vh;
   background-color: #222222;
   position: fixed;
@@ -53,13 +71,6 @@ ul {
   left: 0;
 }
 
-/* Landing */
-.landing-content {
-  display: flex;
-  flex-direction: column; 
-  justify-content: space-evenly;
-}
-
 /* About */
 #headshot {
   width: 280px;
@@ -70,85 +81,59 @@ ul {
 }
 
 .about-content {
+  width: 75rem;
   display: flex;
   flex-direction: column; 
-  justify-content: space-evenly;
 }
 
 /* Projects */
+.project-content {
+  margin: auto;
+  display: grid; 
+  place-items: center;
+}
+
 .tab-buttons {
-  background-color: darkred;
+  width: 100%;
+  background-color: blueviolet;
 }
-.tab-title{
+
+.tab-title {
   color: white;
+  text-align: center;
 }
 
-.tab-title h3, h4 {
-  margin: 0;
-  padding: 0;
-}
-
-.tab {
+.project-description {
   width: 80%;
-  background-color: darkmagenta;
+  margin: 1.5rem auto;
 }
 
 .project-details {
   background-color: darkgreen;
-  margin-top: 2rem;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
+  align-content: stretch;
 }
 
 .tools-used {
+  flex-grow: 1;
   background-color: darkblue;
-  flex: 1;
   padding: 2rem 0 0 3rem;
 }
 
-.tools-used-title{
-  margin-bottom: 0;
+.project-slides {
+  flex-grow: 1;
+  background-color: red;
 }
 
-.tools-used-list {
-  padding-left: 2rem;
-}
-
-.project-images {
-  flex: 1;
-  width: 50%;
-  padding: 2rem 0;
-  background-color: darkred;
-}
-
-.project-image {
-  height: 140px !important;
-  width: 140px !important;
-}
-
-.swiper-slide {
-  display: block;
-}
-
-.swiper-slide h2 {
-  margin-top: 2.8rem;
-}
-
-.swiper-slide img {
-  max-height: 50%;
-  max-width: 80%;
-  pointer-events: none;
-}
+.slide-image {
+  height: 140px;
+  width: 140px;
+} 
 
 /* Media Queries */
 @media only screen and (max-width: 600px) {
-  ion-row {
-    margin-bottom: 1rem;
-  }
-  ion-col {
-    min-width: unset;
-  }
-
   /* About */
   #headshot {
     width: 140px;
@@ -159,20 +144,9 @@ ul {
     padding: 0 10%;
   }
 
-  /* Projects */
-  mat-tab-group {
-    height: auto;
-    width: 100vw;
-  }
   .project-details {
-    flex-direction: column;
-  }
-  .tools-used {
-    background-color: darkblue;
-    width: 100%;
-  }
-  .project-images {
-    width: 100%;
-    background-color: darkred;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: stretch;
   }
 }
