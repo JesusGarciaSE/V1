@@ -13,9 +13,9 @@ document.getElementById('side-bar-icon').addEventListener('click', () => {
 
 function openTab(projectNo) {
     let i;
-    let x = document.getElementsByClassName('tab');
+    let x = document.getElementsByClassName('tab-content');
     for (i = 0; i < x.length; i++) {
         x[i].style.display = 'none';
     }
-    document.getElementById(projectNo).style.display = 'block';
+    document.getElementById(projectNo).style.display = 'flex';
 }

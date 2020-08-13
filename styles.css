@@ -10,6 +10,7 @@
 }
 
 html {
+  height: 100%;
   font-family: "Share Tech Mono", monospace;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -21,20 +22,6 @@ section {
   height: 100vh;
   display: grid;
   place-items: center;
-}
-
-.btn {
-  /* margin: 0 9px; */
-  background: rgba(3, 155, 155);
-  border-radius: 2rem;
-  color: #fafafa;
-  display: inline-block;
-  /* margin-top: 2rem; */
-  padding: 1rem 2.5rem;
-  text-transform: uppercase;
-  transition: background-color 650ms;
-  font-weight: 500;
-  letter-spacing: 2px;
 }
 
 /* Nav CSS */
@@ -75,7 +62,7 @@ ul {
 .about-content {
   margin: 0 10%;
   max-height: 65vh;
-  max-width: 75%;
+  width: min(75%);
   display: flex;
   flex-direction: row;
 }
@@ -91,43 +78,58 @@ ul {
 /* Projects */
 .project-content {
   box-sizing: border-box;
-  background: darkcyan;
-  width: clamp(600px, 80%, 900px);
-  min-height: 60vh;
+  width: clamp(600px, 70%, 900px);
+  height: clamp(60vh, 70vh, 100vh);
 }
 
 .tab-buttons {
   width: 100%;
+  height: 10%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.tab {
+  margin: 0 .5rem;
+  background: rgba(3, 155, 155);
+  border-radius: 2rem;
+  color: #fafafa;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  transition: background-color 650ms;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.tab-content {
+  height: 90%;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .tab-title {
-  color: white;
   text-align: center;
-  padding-top: 1.5rem;
+  margin: 1.5rem 0 1.5rem 0;
 }
 
 .project-description {
-  width: 80%;
-  margin: 1.5rem auto;
+  flex: 1;
+  width: 100%;
+  padding: 0 4rem;
 }
 
 .project-details {
-  background-color: darkgreen;
-  display: flex;
+  display: flex; 
   flex-flow: row wrap;
-  justify-content: center;
-  align-content: stretch;
 }
 
 .tools-used {
-  flex-grow: 1;
-  background-color: darkblue;
+  width: 50%;
   padding: 2rem 0 0 3rem;
 }
 
 .project-slides {
-  flex-grow: 1;
-  background-color: red;
+  width: 50%;
 }
 
 .slide-image {
@@ -137,6 +139,12 @@ ul {
 
 /* Media Queries */
 @media only screen and (max-width: 600px) {
+
+  /* Landing */
+  .landing-content {
+    font-size: .75rem;
+  }
+  
   /* About */
   #headshot {
     width: 140px;
@@ -151,16 +159,35 @@ ul {
     flex-direction: column;
   }
 
+  /* Project */
+  .tab-buttons{
+    overflow-y: scroll;
+  }
+
+  .tab {
+    margin: 0 9px;
+    background: rgba(3, 155, 155);
+    border-radius: 2rem;
+    color: #fafafa;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    transition: background-color 650ms;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+
   .project-content {
     box-sizing: border-box;
     width: 100%;
+    height: 100vh;
   }
 
-  .project-details {
-    background-color: darkgreen;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: stretch;
+  .tools-used {
+    width: 100%;
+    padding: 2rem 0 2rem 3rem;
+  }
+  
+  .project-slides {
+    width: 100%;
   }
 }

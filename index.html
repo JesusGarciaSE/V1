@@ -4,12 +4,23 @@
     <meta charset="utf-8" />
     <title>Kamen Rider Coder</title>
     <link href="./styles.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
-    <ion-icon class="burger-button" id="side-bar-icon" name="menu-sharp" size="large"></ion-icon>
+    <ion-icon
+      class="burger-button"
+      id="side-bar-icon"
+      name="menu-sharp"
+      size="large"
+    ></ion-icon>
     <nav>
       <div id="side-bar">
         <ul id="nav-list">
@@ -29,117 +40,105 @@
       </div>
     </nav>
     <section id="landing">
-        <div class="landing-content">
-          <h1>Jesus Garcia</h1>
-          <h2>Full Stack Developer</h2>
-          <h2>HTML . CSS . JavaScript . Angular . Ionic</h2>
-        </div>
+      <div class="landing-content">
+        <h1>Jesus Garcia</h1>
+        <h2>Full Stack Developer</h2>
+        <h2>HTML . CSS . JavaScript . Angular . Ionic</h2>
+      </div>
     </section>
     <section id="about">
-        <div class="about-content">
-          <img
-            id="headshot"
-            alt="Jesus Garcia"
-            src="assets/jesus_cropped.jpg"
-          />
-          <div class="about-text">
-            <h3>Who am I?</h3>
-            <p>
-              Hello, my name's Jesus. I'm over 18 years old and I'm a full stack
-              developer. I have my masters in Computer Science from the University
-              of Texas of the Permian Basin, and my Bachelor's in Film and Digital
-              Media from Baylor University.
-            </p>
-            <br/>
-            <p>
-              I originally started computer science at Baylor on their gaming
-              track learning C++ and Intro to film, but film was too much fun and
-              I jumped ship. After getting my Bachelor's in Film and Digital Media
-              and coming home I decided to finish up my Computer Science degree,
-              this time learning Java, C, and web languages like HTML, CSS,
-              Javascript. Web developement really struck a cord and 2 years later
-              I'm still going strong!
-            </p>
-            <br/>
-            <p>
-              When I'm not coding, I'm passing the time playing games, reading
-              about new web technologies, or watching anime and tokusatsu shows!
-            </p>
-          </div>
+      <div class="about-content">
+        <img id="headshot" alt="Jesus Garcia" src="assets/jesus_cropped.jpg" />
+        <div class="about-text">
+          <h3>Who am I?</h3>
+          <p>
+            Hello, my name's Jesus. I'm over 18 years old and I'm a full stack
+            developer. I have my masters in Computer Science from the University
+            of Texas of the Permian Basin, and my Bachelor's in Film and Digital
+            Media from Baylor University.
+          </p>
+          <br />
+          <p>
+            I originally started computer science at Baylor on their gaming
+            track learning C++ and Intro to film, but film was too much fun and
+            I jumped ship. After getting my Bachelor's in Film and Digital Media
+            and coming home I decided to finish up my Computer Science degree,
+            this time learning Java, C, and web languages like HTML, CSS,
+            Javascript. Web developement really struck a cord and 2 years later
+            I'm still going strong!
+          </p>
+          <br />
+          <p>
+            When I'm not coding, I'm passing the time playing games, reading
+            about new web technologies, or watching anime and tokusatsu shows!
+          </p>
         </div>
+      </div>
     </section>
     <section id="projects">
-        <div class="project-content">
-          <div class="tab-buttons">
-            <button class="btn" onclick="openTab('project1')">
-              Mobile Application
-            </button>
-            <button class="btn" onclick="openTab('project2')">
-              Website Update
-            </button>
+      <div class="project-content">
+        <div class="tab-buttons">
+          <button class="tab" onclick="openTab('project1')">
+            Mobile Application
+          </button>
+          <button class="tab" onclick="openTab('project2')">
+            Website Update
+          </button>
+          <button class="tab" onclick="openTab('project2')">
+            Website Update
+          </button>
+        </div>
+        <!-- End Tab-Buttons -->
+        <div id="project1" class="tab-content">
+          <div class="tab-title">
+            <h3>Mobile Ticket Application</h3>
+            <h4>Conventional Ticket Replacement</h4>
           </div>
-          <div id="project1" class="tab">
-            <div class="tab-title">
-              <h3>Mobile Ticket Application</h3>
-              <h4>Conventional Ticket Replacement</h4>
+          <p class="project-description">
+            This mobile application was intended to replace the traditional
+            ticketing system in place for J2 Acid Solutions LLC. The original
+            paper ticketing system in place involved a lot of redundant back and
+            forth between the field hand, office, and buyer. This made the paper
+            tickets highly prone to field hand errors. This ticketing system
+            minimized user error by syncing with a online database and limiting
+            what information the field hand could change.
+          </p>
+          <div class="project-details">
+            <div class="tools-used">
+              <h4>Tools Used</h4>
+              <ul>
+                <li>
+                  Ionic 4
+                </li>
+                <li>
+                  Angular 10
+                </li>
+                <li>
+                  Google Firebase
+                </li>
+              </ul>
             </div>
-            <div class="project-description">
-              This mobile application was intended to replace the traditional
-              ticketing system in place for J2 Acid Solutions LLC. The original
-              paper ticketing system in place involved a lot of redundant back and
-              forth between the field hand, office, and buyer. This made the paper
-              tickets highly prone to field hand errors. This ticketing system
-              minimized user error by syncing with a online database and limiting
-              what information the field hand could change.
-            </div>
-            <div class="project-details">
-              <div class="tools-used">
-                  <h4>Tools Used</h4>
-                  <ul>
-                    <li>
-                      Ionic 4
-                    </li>
-                    <li>
-                      Angular 10
-                    </li>
-                    <li>
-                      Google Firebase
-                    </li>
-                  </ul>
-              </div>
-              <div class="project-slides">
-                <div class="slide">
-                    <h1>Slide 1</h1>
-                    <img
-                      class="slide-image"
-                      alt="Jesus Garcia"
-                      src="assets/ZeroOne.jpg"
-                    />
-                  </div>
-                  <!-- <div class="slide">
-                    <h1>Slide 2</h1>
-                    <img
-                      class="slide-image"
-                      alt="Jesus Garcia"
-                      src="assets/ZeroOne.jpg"
-                    />
-                  </div>
-                  <div class="slide">
-                    <h1>Slide 3</h1>
-                    <img
-                      class="slide-image"
-                      alt="Jesus Garcia"
-                      src="assets/ZeroOne.jpg"
-                    />
-                  </div> -->
+            <!-- End Tools Used -->
+            <div class="project-slides">
+              <div class="slide">
+                <h1>Slide 1</h1>
+                <img
+                  class="slide-image"
+                  alt="Jesus Garcia"
+                  src="assets/ZeroOne.jpg"
+                />
               </div>
             </div>
-          </div> <!-- project 1 tab -->
-          <div id="project2" class="tab" style="display: none;">
-            project2
-          </div> <!-- Tab 2 content -->
-        </div> <!-- Tab container -->
-    </section><!-- Projects -->
+          </div>
+        </div>
+        <!-- End Project 1 Tab -->
+        <div id="project2" class="tab-content" style="display: none;">
+          project2
+        </div>
+      </div>
+      <!-- End Project Content -->
+    </section>
+    <!-- End Projects -->
   </body>
   <script src="main.js"></script>
 </html>
