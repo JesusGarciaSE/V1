@@ -40,15 +40,15 @@
       </div>
     </nav>
     <section id="landing">
-      <div class="landing-content">
+      <div class="container">
         <h1>Jesus Garcia</h1>
         <h2>Full Stack Developer</h2>
         <h2>HTML . CSS . JavaScript . Angular . Ionic</h2>
       </div>
     </section>
     <section id="about">
-      <div class="about-content">
-        <img id="headshot" alt="Jesus Garcia" src="assets/jesus_cropped.jpg" />
+      <div class="content">
+        <img loading="lazy" height="563" width="562" id="headshot" alt="Jesus Garcia" src="assets/jesus_cropped.jpg" />
         <div class="about-text">
           <h3>Who am I?</h3>
           <p>
@@ -76,19 +76,18 @@
       </div>
     </section>
     <section id="projects">
-      <div class="project-content">
+      <div class="content">
         <div class="tab-buttons">
-          <button class="tab" onclick="openTab('project1')">
+          <a class="tab" onclick="openTab('project1')">
             Mobile Application
-          </button>
-          <button class="tab" onclick="openTab('project2')">
+          </a>
+          <a class="tab" onclick="openTab('project2')">
             Website Update
-          </button>
-          <button class="tab" onclick="openTab('project2')">
+          </a>
+          <a class="tab" onclick="openTab('project2')">
             Website Update
-          </button>
+          </a>
         </div>
-        <!-- End Tab-Buttons -->
         <div id="project1" class="tab-content">
           <div class="tab-title">
             <h3>Mobile Ticket Application</h3>
@@ -118,7 +117,6 @@
                 </li>
               </ul>
             </div>
-            <!-- End Tools Used -->
             <div class="project-slides">
               <div class="slide">
                 <h1>Slide 1</h1>
@@ -131,14 +129,11 @@
             </div>
           </div>
         </div>
-        <!-- End Project 1 Tab -->
         <div id="project2" class="tab-content" style="display: none;">
           project2
         </div>
       </div>
-      <!-- End Project Content -->
     </section>
-    <!-- End Projects -->
   </body>
   <script src="main.js"></script>
 </html>
