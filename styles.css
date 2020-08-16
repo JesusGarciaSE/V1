@@ -94,7 +94,7 @@ ul {
 }
 
 .tab-content {
-  display: flex;
+  display: none;
   flex-flow: column nowrap;
 }
 
