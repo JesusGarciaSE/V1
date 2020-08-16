@@ -8,7 +8,6 @@
   padding: 0;
   box-sizing: inherit;
 }
-
 html {
   height: 100%;
   font-family: "Share Tech Mono", Verdana, monospace;
@@ -117,28 +116,17 @@ ul {
 
 .tools-used {
   width: 50%;
-  padding-top: 2rem;
   padding-left: 3rem;
 }
 
+.owl-carousel {
+  width: 50% !important;
+}
+
 .slide-image {
-  display: block;
   height: auto;
   width: 90%;
-  margin: auto;
 }
 
-.main-carousel {
-  width: 50%;
-}
-
-.carousel-cell {
-  width: 100%;
-}
-
-/* .flickity-enabled:focus .flickity-viewport {
-  border: 2px solid chartreuse;
-  border: 2px solid chartreuse -webkit-focus-ring-color;
-} */
 
 

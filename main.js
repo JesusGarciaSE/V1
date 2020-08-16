@@ -19,3 +19,16 @@ function openTab(projectNo) {
     }
     document.getElementById(projectNo).style.display = 'flex';
 }
+
+$('#project1-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    items: 1
+});
+$('#project2-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    items: 1
+});

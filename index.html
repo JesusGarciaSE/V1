@@ -4,16 +4,9 @@
     <meta charset="utf-8" />
     <title>Kamen Rider Coder</title>
     <link href="./styles.css" rel="stylesheet" />
-    <link href="./flickity.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="./owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./owlcarousel/owl.theme.default.min.css">
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule=""
-      src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"
-    ></script>
   </head>
   <body>
     <ion-icon
@@ -40,7 +33,7 @@
         </ul>
       </div>
     </nav>
-    <!-- <section id="landing">
+    <section id="landing">
       <div class="container">
         <h1>Jesus Garcia</h1>
         <h2>Full Stack Developer</h2>
@@ -75,7 +68,7 @@
           </p>
         </div>
       </div>
-    </section> -->
+    </section>
     <section id="projects">
       <div class="content">
         <div class="tab-buttons">
@@ -85,8 +78,8 @@
           <a class="tab" onclick="openTab('project2')">
             Website Update
           </a>
-          <a class="tab" onclick="openTab('project2')">
-            Website Update
+          <a class="tab" onclick="openTab('project3')">
+            Random Project
           </a>
         </div>
         <div id="project1" class="tab-content">
@@ -118,32 +111,22 @@
                 </li>
               </ul>
             </div>
-            <div class="main-carousel" data-flickity='{ "contain": "true"}'>
-              <div class="carousel-cell">
-                <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="assets/ZeroOne.jpg"/>
-              </div>
-              <div class="carousel-cell">
-                <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="assets/jesus.jpg"/>
-              </div>
-              <div class="carousel-cell">
-                <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="assets/jesus_cropped.jpg"/>
-              </div>
+            <div id="project1-carousel" class="owl-carousel owl-theme">
+              <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="./assets/ZeroOne.jpg"/>
+              <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="./assets/jesus.jpg"/>
+              <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="./assets/jesus_cropped.jpg"/>
             </div>
           </div>
         </div>
-        <div id="project2" class="tab-content" style="display: none;">
+        <div id="project2" class="tab-content">
           <div class="tab-title">
-            <h3>Mobile Ticket Application</h3>
-            <h4>Conventional Ticket Replacement</h4>
+            <h3>Website Update</h3>
+            <h4>From Static to Custom</h4>
           </div>
           <p class="project-description">
-            This mobile application was intended to replace the traditional
-            ticketing system in place for J2 Acid Solutions LLC. The original
-            paper ticketing system in place involved a lot of redundant back and
-            forth between the field hand, office, and buyer. This made the paper
-            tickets highly prone to field hand errors. This ticketing system
-            minimized user error by syncing with a online database and limiting
-            what information the field hand could change.
+            J2 Acid Solution's original website was build hastily in a single 
+            night using a generic website builder. At the owner's request, I
+            updated their website into a custom mobile friendly website.
           </p>
           <div class="project-details">
             <div class="tools-used">
@@ -160,22 +143,52 @@
                 </li>
               </ul>
             </div>
-            <div class="main-carousel" data-flickity='{ "contain": "true"}'>
-              <div class="carousel-cell">
-                <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="assets/ZeroOne.jpg"/>
-              </div>
-              <div class="carousel-cell">
-                <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="assets/jesus.jpg"/>
-              </div>
-              <div class="carousel-cell">
-                <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="assets/jesus_cropped.jpg"/>
-              </div>
+            <div id="project2-carousel" class="owl-carousel owl-theme">
+              <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="./assets/ZeroOne.jpg"/>
+              <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="./assets/jesus.jpg"/>
+              <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="./assets/jesus_cropped.jpg"/>
             </div>
           </div>
+        </div>
+        <div id="project3" class="tab-content" style="display: none;">
+          project 3
+        </div>
+
+      </div>
+    </section>
+    <section id="contact">
+      <div class="content">
+        <img loading="lazy" height="563" width="562" id="headshot" alt="Jesus Garcia" src="assets/jesus_cropped.jpg" />
+        <div class="about-text">
+          <h3>Who am I?</h3>
+          <p>
+            Hello, my name's Jesus. I'm over 18 years old and I'm a full stack
+            developer. I have my masters in Computer Science from the University
+            of Texas of the Permian Basin, and my Bachelor's in Film and Digital
+            Media from Baylor University.
+          </p>
+          <br />
+          <p>
+            I originally started computer science at Baylor on their gaming
+            track learning C++ and Intro to film, but film was too much fun and
+            I jumped ship. After getting my Bachelor's in Film and Digital Media
+            and coming home I decided to finish up my Computer Science degree,
+            this time learning Java, C, and web languages like HTML, CSS,
+            Javascript. Web developement really struck a cord and 2 years later
+            I'm still going strong!
+          </p>
+          <br />
+          <p>
+            When I'm not coding, I'm passing the time playing games, reading
+            about new web technologies, or watching anime and tokusatsu shows!
+          </p>
         </div>
       </div>
     </section>
   </body>
-  <script src="main.js"></script>
-  <script src="flickity.pkgd.min.js"></script>
+  <script type="text/javascript" src="./jquery.min.js"></script>
+  <script type="text/javascript" src="./owlcarousel/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
 </html>
