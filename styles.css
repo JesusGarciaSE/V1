@@ -85,7 +85,7 @@ ul {
 
 .tab {
   display: inline-block;
-  background: black;
+  background: transparent;
   color: chartreuse;
   padding: 1rem 1.5rem;
   text-transform: uppercase;
@@ -121,12 +121,24 @@ ul {
   padding-left: 3rem;
 }
 
-.project-slides {
-  width: 50%;
-  text-align: center;
+.slide-image {
+  display: block;
+  height: auto;
+  width: 90%;
+  margin: auto;
 }
 
-.slide-image {
-  height: auto;
-  width: 80%;
+.main-carousel {
+  width: 50%;
 }
+
+.carousel-cell {
+  width: 100%;
+}
+
+/* .flickity-enabled:focus .flickity-viewport {
+  border: 2px solid chartreuse;
+  border: 2px solid chartreuse -webkit-focus-ring-color;
+} */
+
+

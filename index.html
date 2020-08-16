@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Kamen Rider Coder</title>
     <link href="./styles.css" rel="stylesheet" />
+    <link href="./flickity.min.css" rel="stylesheet" media="screen">
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <script
       type="module"
@@ -39,7 +40,7 @@
         </ul>
       </div>
     </nav>
-    <section id="landing">
+    <!-- <section id="landing">
       <div class="container">
         <h1>Jesus Garcia</h1>
         <h2>Full Stack Developer</h2>
@@ -74,7 +75,7 @@
           </p>
         </div>
       </div>
-    </section>
+    </section> -->
     <section id="projects">
       <div class="content">
         <div class="tab-buttons">
@@ -117,23 +118,64 @@
                 </li>
               </ul>
             </div>
-            <div class="project-slides">
-              <div class="slide">
-                <h1>Slide 1</h1>
-                <img
-                  class="slide-image"
-                  alt="Jesus Garcia"
-                  src="assets/ZeroOne.jpg"
-                />
+            <div class="main-carousel" data-flickity='{ "contain": "true"}'>
+              <div class="carousel-cell">
+                <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="assets/ZeroOne.jpg"/>
+              </div>
+              <div class="carousel-cell">
+                <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="assets/jesus.jpg"/>
+              </div>
+              <div class="carousel-cell">
+                <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="assets/jesus_cropped.jpg"/>
               </div>
             </div>
           </div>
         </div>
         <div id="project2" class="tab-content" style="display: none;">
-          project2
+          <div class="tab-title">
+            <h3>Mobile Ticket Application</h3>
+            <h4>Conventional Ticket Replacement</h4>
+          </div>
+          <p class="project-description">
+            This mobile application was intended to replace the traditional
+            ticketing system in place for J2 Acid Solutions LLC. The original
+            paper ticketing system in place involved a lot of redundant back and
+            forth between the field hand, office, and buyer. This made the paper
+            tickets highly prone to field hand errors. This ticketing system
+            minimized user error by syncing with a online database and limiting
+            what information the field hand could change.
+          </p>
+          <div class="project-details">
+            <div class="tools-used">
+              <h4>Tools Used</h4>
+              <ul>
+                <li>
+                  Ionic 4
+                </li>
+                <li>
+                  Angular 10
+                </li>
+                <li>
+                  Google Firebase
+                </li>
+              </ul>
+            </div>
+            <div class="main-carousel" data-flickity='{ "contain": "true"}'>
+              <div class="carousel-cell">
+                <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="assets/ZeroOne.jpg"/>
+              </div>
+              <div class="carousel-cell">
+                <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="assets/jesus.jpg"/>
+              </div>
+              <div class="carousel-cell">
+                <img width="1556" height="2048" class="slide-image" alt="Jesus Garcia" src="assets/jesus_cropped.jpg"/>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </body>
   <script src="main.js"></script>
+  <script src="flickity.pkgd.min.js"></script>
 </html>
