@@ -18,30 +18,24 @@ function openTab(projectNo) {
         x[i].style.display = 'none';
     }
     document.getElementById(projectNo).style.display = 'flex';
-    $(`#${projectNo}-carousel`).owlCarousel({
-        loop:true,
-        margin:10,
-        nav:true,
-        items: 1
-    });
+    var flkty = new Flickity(`#${projectNo}-carousel`, {});
+    flkty.resize();
+
+    
 }
 
-$( document ).ready(function() {
-    document.getElementById('project1').style.display = 'flex';
-    $('#project1-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:true,
-        items: 1
-    });
-    var docWidth = document.documentElement.offsetWidth;
+document.getElementById('project1').style.display = 'flex';
+var project1Carousel = new Flickity('#project1-carousel', {});
+
+
+
+var docWidth = document.documentElement.offsetWidth;
     
-    [].forEach.call(
-      document.querySelectorAll('*'),
-      function(el) {
-        if (el.offsetWidth > docWidth) {
-          console.log(el);
-        }
-      }
-    );
-});
+[].forEach.call(
+    document.querySelectorAll('*'),
+    function(el) {
+    if (el.offsetWidth > docWidth) {
+        console.log(el);
+    }
+    }
+);
