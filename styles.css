@@ -14,13 +14,17 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   color: #e7e7e7;
-  background: rgb(19, 19, 19);
+  background: rgb(10, 10, 10);
 }
 
 section {
   height: 100vh;
   display: grid;
   place-items: center;
+}
+
+h5, h4, h3, h2, h1 {
+  color: chartreuse;
 }
 
 .content {
@@ -35,24 +39,18 @@ section {
   left: 0;
   top: 0;
   background: rgba(55, 55, 55, 0.5);
-  padding: 1.2rem;
-}
-
-ul {
-  list-style: none;
+  padding: 1.75vmin;
+  height: 4vmin;
+  width: 4vmin;
 }
 
 #side-bar {
   width: 15rem;
   height: 100vh;
-  background-color: #222222;
+  background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: -26rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
   z-index: 998;
   transition: left 650ms ease-in-out;
 }
@@ -61,8 +59,34 @@ ul {
   left: 0;
 }
 
+#nav-list {
+  list-style: none;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: chartreuse;
+  background-color: rgba(0, 0, 0, 0);
+  
+  padding: 1rem 1.5rem;
+  border-radius: 1em;
+}
+
+.nav-link:hover {
+  color: red;
+}
+
 /* About */
-#headshot {
+.headshot {
   display: block;
   width: 75%;
   height: auto;
@@ -85,7 +109,7 @@ ul {
 .tab {
   display: inline-block;
   background: transparent;
-  color: chartreuse;
+  color: red;
   padding: 1rem 1.5rem;
   text-transform: uppercase;
   transition: background-color 650ms;
@@ -117,6 +141,10 @@ ul {
 .tools-used {
   width: 50%;
   padding-left: 3rem;
+}
+
+.tools {
+  list-style: none;
 }
 
 .carousel {

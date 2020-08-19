@@ -1,6 +1,9 @@
-document.getElementById('side-bar-icon').addEventListener('click', () => {
-    let menuButton = document.getElementById('side-bar-icon');
-    let menu = document.getElementById('side-bar');
+var menuButton = document.getElementById('side-bar-icon');
+var menu = document.getElementById('side-bar');
+var navLinks = document.getElementsByClassName('nav-link');
+var tabs = document.getElementsByClassName('tab-content');
+
+document.getElementById('side-bar-icon').addEventListener('click', () => {   
     if(menuButton.getAttribute('name') == 'menu-sharp'){
         menuButton.setAttribute('name', 'close-sharp');
         menu.classList.toggle('active');
@@ -11,31 +14,31 @@ document.getElementById('side-bar-icon').addEventListener('click', () => {
     }
 })
 
+for(const link of navLinks) {
+    link.addEventListener("click", () => {
+        document.getElementById("side-bar").classList.toggle("active");
+    });
+};
+
 function openTab(projectNo) {
-    let i;
-    let x = document.getElementsByClassName('tab-content');
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = 'none';
+    for (const tab of tabs) {
+        tab.style.display = 'none';
     }
     document.getElementById(projectNo).style.display = 'flex';
     var flkty = new Flickity(`#${projectNo}-carousel`, {});
     flkty.resize();
-
-    
 }
 
 document.getElementById('project1').style.display = 'flex';
 var project1Carousel = new Flickity('#project1-carousel', {});
 
-
-
-var docWidth = document.documentElement.offsetWidth;
+// var docWidth = document.documentElement.offsetWidth;
     
-[].forEach.call(
-    document.querySelectorAll('*'),
-    function(el) {
-    if (el.offsetWidth > docWidth) {
-        console.log(el);
-    }
-    }
-);
+// [].forEach.call(
+//     document.querySelectorAll('*'),
+//     function(el) {
+//     if (el.offsetWidth > docWidth) {
+//         console.log(el);
+//     }
+//     }
+// );
