@@ -20,17 +20,22 @@ for(const link of navLinks) {
     });
 };
 
+var options = {
+    wrapAround: true,
+    prevNextButtons: false
+}
+
 function openTab(projectNo) {
     for (const tab of tabs) {
         tab.style.display = 'none';
     }
     document.getElementById(projectNo).style.display = 'flex';
-    var flkty = new Flickity(`#${projectNo}-carousel`, {});
+    var flkty = new Flickity(`#${projectNo}-carousel`, options);
     flkty.resize();
 }
 
 document.getElementById('project1').style.display = 'flex';
-var project1Carousel = new Flickity('#project1-carousel', {});
+var project1Carousel = new Flickity('#project1-carousel', options);
 
 // var docWidth = document.documentElement.offsetWidth;
     
