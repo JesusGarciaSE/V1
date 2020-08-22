@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Kamen Rider Coder</title>
+    <script src="https://kit.fontawesome.com/9e69960a60.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="stylesheet" href="./flickity/flickity.min.css">
     <link href="./styles.css" rel="stylesheet" />
@@ -20,7 +21,7 @@
           <li>
             <h3>
               Jesus Garcia
-            </h4>
+            </h3>
           </li>
           <li>
             <img loading="lazy" height="563" width="562" class="headshot" alt="Jesus Garcia" src="assets/jesus_cropped.jpg" />
@@ -44,55 +45,55 @@
       <div class="container">
         <h1>Jesus Garcia</h1>
         <h2>Full Stack Developer</h2>
-        <h2>HTML . CSS . JavaScript . Angular . Ionic</h2>
+        <h3>HTML . CSS . JavaScript . Angular . Ionic</h3>
+        <div class="tab-buttons">
+          <div class="tab" onclick="changeTheme('zero-one')">
+            zero-one
+          </div>
+          <div class="tab" onclick="changeTheme('saber')">
+            saber
+          </div>
+        </div>
       </div>
     </section>
     <section id="about">
       <div class="content">
         <img loading="lazy" height="563" width="562" class="headshot" alt="Jesus Garcia" src="assets/jesus_cropped.jpg" />
         <div class="about-text">
-          <h3>Who am I?</h3>
+          <h2>Who am I?</h2>
           <p>
             Hello, my name's Jesus. I'm over 18 years old and I'm a full stack
             developer. I have my masters in Computer Science from the University
             of Texas of the Permian Basin, and my Bachelor's in Film and Digital
             Media from Baylor University.
           </p>
-          <br />
           <p>
-            I originally started computer science at Baylor on their gaming
-            track learning C++ and Intro to film, but film was too much fun and
-            I jumped ship. After getting my Bachelor's in Film and Digital Media
-            and coming home I decided to finish up my Computer Science degree,
-            this time learning Java, C, and web languages like HTML, CSS,
-            Javascript. Web developement really struck a cord and 2 years later
-            I'm still going strong!
+            I originally started with my degree in computer science as part of the 
+            Computer Science gaming focus at Baylor, but I ended up enjoying film
+            a lot more. After graduating Baylor I decided to finish up my bachelor's 
+            in Computer Science. 
           </p>
-          <br />
           <p>
-            When I'm not coding, I'm passing the time playing games, reading
-            about new web technologies, or watching anime and tokusatsu shows!
+            When I'm not working, I'm playing games with friends, reading
+            science fiction, or watching anime and tokusatsu!
           </p>
         </div>
       </div>
     </section>
     <section id="projects">
-      <div class="content">
+      <div class="content projects-container">
         <div class="tab-buttons">
-          <a class="tab" onclick="openTab('project1')">
-            Mobile Application
-          </a>
-          <a class="tab" onclick="openTab('project2')">
-            Website Update
-          </a>
-          <a class="tab" onclick="openTab('project3')">
-            Random Project
-          </a>
+          <div class="tab" onclick="openTab('project1')">
+            <h2>Mobile Application</h2>
+          </div>
+          <div class="tab" onclick="openTab('project2')">
+            <h2>Website Update</h2>
+          </div>
         </div>
         <div id="project1" class="tab-content">
           <div class="tab-title">
             <h3>Mobile Ticket Application</h3>
-            <h4>Conventional Ticket Replacement</h4>
+            <h5>Conventional Ticket Replacement</h5>
           </div>
           <p class="project-description">
             This mobile application was intended to replace the traditional
@@ -128,7 +129,7 @@
         <div id="project2" class="tab-content">
           <div class="tab-title">
             <h3>Website Update</h3>
-            <h4>From Static to Custom</h4>
+            <h5>From Static to Custom</h5>
           </div>
           <p class="project-description">
             J2 Acid Solution's original website was build hastily in a single 
@@ -140,7 +141,7 @@
           <div class="project-details">
             <div class="tools-used">
               <h4>Tools Used</h4>
-              <ul>
+              <ul class="tools">
                 <li>
                   Ionic 4
                 </li>
@@ -156,37 +157,28 @@
             </div>
           </div>
         </div>
-        <div id="project3" class="tab-content" style="display: none;">
-          project 3
-        </div>
-
       </div>
     </section>
     <section id="contact">
       <div class="content">
-        <img loading="lazy" height="563" width="562" class="headshot" alt="Jesus Garcia" src="assets/jesus_cropped.jpg" />
         <div class="about-text">
-          <h3>Who am I?</h3>
+          <h2>Contact</h2>
           <p>
-            Hello, my name's Jesus. I'm over 18 years old and I'm a full stack
-            developer. I have my masters in Computer Science from the University
-            of Texas of the Permian Basin, and my Bachelor's in Film and Digital
-            Media from Baylor University.
+            I'd love to hear from you, even if it's just to say "Hello!". Please
+            feel free to reach out to me through any of the platforms below and 
+            I'll do my best to get back to you as soon as I can!
           </p>
-          <br />
           <p>
-            I originally started computer science at Baylor on their gaming
-            track learning C++ and Intro to film, but film was too much fun and
-            I jumped ship. After getting my Bachelor's in Film and Digital Media
-            and coming home I decided to finish up my Computer Science degree,
-            this time learning Java, C, and web languages like HTML, CSS,
-            Javascript. Web developement really struck a cord and 2 years later
-            I'm still going strong!
+            <a href="mailto:Jesus.R.Garcia9191@gmail.com">
+              <i class="fas fa-envelope-open" aria-hidden="true"></i> 
+              &emsp;Jesus.R.Garcia9191@gmail.com
+            </a>
           </p>
-          <br />
           <p>
-            When I'm not coding, I'm passing the time playing games, reading
-            about new web technologies, or watching anime and tokusatsu shows!
+            <a href="https://www.twitter.com/KR_Progriser">
+              <i class="fab fa-twitter"></i>
+              &emsp;@KR_Progriser
+            </a>
           </p>
         </div>
       </div>

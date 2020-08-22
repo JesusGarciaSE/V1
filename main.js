@@ -37,13 +37,26 @@ function openTab(projectNo) {
 document.getElementById('project1').style.display = 'flex';
 var project1Carousel = new Flickity('#project1-carousel', options);
 
-// var docWidth = document.documentElement.offsetWidth;
-    
-// [].forEach.call(
-//     document.querySelectorAll('*'),
-//     function(el) {
-//     if (el.offsetWidth > docWidth) {
-//         console.log(el);
-//     }
-//     }
-// );
+
+function changeTheme(theme) {
+    if(theme == 'zero-one') {
+        document.documentElement.style.setProperty('--primary', 'var(--zero-one-primary)');
+        document.documentElement.style.setProperty('--secondary', 'var(--zero-one-secondary)');
+        document.documentElement.style.setProperty('--font', 'var(--zero-one-font)');
+    }
+    if(theme == 'saber') {
+        document.documentElement.style.setProperty('--primary', 'var(--saber-primary)');
+        document.documentElement.style.setProperty('--secondary', 'var(--saber-secondary)');
+        document.documentElement.style.setProperty('--font', 'var(--saber-font)');
+    }
+}
+
+var docWidth = document.documentElement.offsetWidth;    
+[].forEach.call(
+    document.querySelectorAll('*'),
+    function(el) {
+        if (el.offsetWidth > docWidth) {
+            console.log(el);
+        }
+    }
+);
