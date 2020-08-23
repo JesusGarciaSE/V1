@@ -120,10 +120,18 @@ a {
   box-shadow: 0 0 5px 5px var(--secondary);
 }
 
+.nav-headshot {
+  display: block;
+  width: 75%;
+  height: auto;
+  margin: auto;
+  border-radius: 100%;
+}
+
 /* About */
 .headshot {
   display: block;
-  width: 75%;
+  width: clamp(140.5px, 75%, 526px);
   height: auto;
   margin: 0 auto 2.5rem auto;
   border-radius: 100%;
@@ -177,7 +185,7 @@ a {
 
 .tools-used {
   width: 50%;
-  padding-left: 3rem;
+  padding-left: 4rem;
 }
 
 .tools {
@@ -216,5 +224,64 @@ a {
   margin: 0 10vw;
 }
 
+/* Contact */
+.contact-text {
+  margin: 0 10%;
+}
 
+.contact-link:hover, .contact-link:focus {
+  color: var(--primary);
+}
+
+@media only screen and (min-width: 768px) {
+  
+  h5, h4, h3, h2, h1, p {
+    font-size: clamp(1rem, .5rem + 2vw , 2.5rem);
+  }
+
+  .content {
+    width: 80%;
+  }
+
+  .headshot {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .content {
+    width: 80%;
+  }
+
+  .headshot {
+    width: 40%;
+  }
+
+  .tab-content {
+    min-height: 55vh;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  p {
+    font-size: 1.5rem;
+  }
+
+  #about .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #about .content .headshot {
+    margin: auto;
+  }
+  #about .content .about-text {
+    margin: 0 5% 0 5%;
+  }
+
+  .contact-text {
+    width: 60%;
+    margin: auto;
+  }
+}
 
