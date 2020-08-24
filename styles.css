@@ -58,7 +58,6 @@ p {
 a {
   list-style: none;
   text-decoration: none;
-  text-transform: uppercase;
   color: var(--font);
 }
 
@@ -66,7 +65,12 @@ a {
   max-width: 100vw;
 }
 
-/* Nav CSS */
+* + .external-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+
+/* Nav */
 .burger-button {
   cursor: pointer;
   z-index: 999;
@@ -111,13 +115,27 @@ a {
 
 .nav-link {  
   background: var(--primary);
-  
   padding: .5rem 1rem;
   border-radius: 1rem;
+  text-transform: uppercase;
+  position: relative;
 }
 
-.nav-link:hover, .nav-link:focus {
+.nav-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
   box-shadow: 0 0 5px 5px var(--secondary);
+  opacity: 0;
+  transition: opacity 350ms ease-in;
+}
+
+.nav-link:hover::after, .nav-link:focus::after {
+  opacity: 1;
 }
 
 .nav-headshot {
@@ -229,7 +247,11 @@ a {
   margin: 0 10%;
 }
 
-.contact-link:hover, .contact-link:focus {
+.external-link {
+  color: var(--font-color);
+}
+
+.external-link:hover, .external-link:focus {
   color: var(--primary);
 }
 
