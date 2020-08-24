@@ -146,6 +146,26 @@ a {
   border-radius: 100%;
 }
 
+.themes {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.theme-icon {
+  height: auto;
+  width: 50%;
+  padding: 0 10%;
+} 
+
+#zero-one-theme:hover, #zero-one-theme:focus {
+  filter: drop-shadow(0 0 5px var(--zero-one-secondary));
+} 
+
+#saber-theme:hover, #saber-theme:focus {
+  filter: drop-shadow(0 0 5px var(--saber-secondary));
+} 
+
 /* About */
 .headshot {
   display: block;
