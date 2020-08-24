@@ -95,6 +95,7 @@ a {
   top: 0;
   left: -26rem;
   z-index: 998;
+  padding-top: 2rem;
   transition: left 650ms ease-in-out;
 }
 
@@ -306,7 +307,7 @@ a {
 
 @media only screen and (min-width: 1200px) {
   p {
-    font-size: 1.5rem;
+    font-size: 18px;
   }
 
   #about .content {
