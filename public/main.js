@@ -3,15 +3,8 @@ var menu = document.getElementById('side-bar');
 var navLinks = document.getElementsByClassName('nav-link');
 var tabs = document.getElementsByClassName('tab-content');
 
-document.getElementById('side-bar-icon').addEventListener('click', () => {   
-    if(menuButton.getAttribute('name') == 'menu-sharp'){
-        menuButton.setAttribute('name', 'close-sharp');
-        menu.classList.toggle('active');
-    }
-    else {
-        menuButton.setAttribute('name', 'menu-sharp');
-        menu.classList.toggle('active');
-    }
+document.getElementById('side-bar-icon').addEventListener('click', () => {
+    menu.classList.toggle('active');
 })
 
 for(const link of navLinks) {

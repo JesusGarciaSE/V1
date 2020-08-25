@@ -71,21 +71,40 @@ a {
   margin-top: 1.5rem;
 }
 
+
+ul {
+  list-style: none;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+ul li {
+  position: relative;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: -15px;
+  border-top: 8px solid transparent;
+  border-left: 8px solid var(--primary);
+  border-bottom: 8px solid transparent;
+  color: var(--primary);
+}
+
 /* Nav */
-.burger-button {
+#side-bar-icon {
   cursor: pointer;
   z-index: 999;
   position: fixed;
-  left: 0;
-  top: 0;
-  background: var(--backgound-color);
-  padding: 1.75vmin;
-  height: 40px;
-  width: 40px;
+  left: .5vw;
+  top: .5vh;
+  height: auto;
+  width: 3rem;
 }
 
-.burger-button:focus, .burger-button:hover {
-  box-shadow: 0 0 5px 5px var(--secondary);
+#side-bar-icon:focus, #side-bar-icon:hover {
+  filter: drop-shadow(0 0 5px var(--secondary));
 }
 
 #side-bar {
@@ -114,6 +133,10 @@ a {
   justify-content: space-evenly;
   align-items: center;
   font-size: 1.5rem;
+}
+
+#nav-list li::before {
+  content: unset;
 }
 
 .nav-link {  
@@ -183,27 +206,6 @@ a {
   justify-content: space-evenly;
 }
 
-.skills ul {
-  list-style: none;
-  line-height: 1.5;
-  letter-spacing: 2px;
-}
-
-.skills ul li {
-  position: relative;
-}
-
-.skills ul li::before {
-  content: '';
-  position: absolute;
-  top: 20%;
-  left: -15px;
-  border-top: 8px solid transparent;
-  border-left: 8px solid var(--primary);
-  border-bottom: 8px solid transparent;
-  color: var(--primary);
-}
-
 /* Projects */
 .tab-buttons {
   display: flex;
@@ -252,7 +254,7 @@ a {
 }
 
 .tools li {
-  list-style: none;
+  margin-left: 1rem;
 }
 
 .carousel {
@@ -304,22 +306,12 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
-
-  h5, h4, h3, h2, h1, p, li {
-    font-size: 1.5rem;
-  }
-
   .content {
     width: 80%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-
-  h5, h4, h3, h2, h1, p, li {
-    font-size: 1rem;
-  }
-
   #side-bar {
     width: 30vw;
     left: -30vw;
