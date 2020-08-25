@@ -29,12 +29,12 @@ function openTab(projectNo) {
     for (const tab of tabs) {
         tab.style.display = 'none';
     }
-    document.getElementById(projectNo).style.display = 'flex';
+    document.getElementById(projectNo).style.display = 'grid';
     var flkty = new Flickity(`#${projectNo}-carousel`, options);
     flkty.resize();
 }
 
-document.getElementById('project1').style.display = 'flex';
+document.getElementById('project1').style.display = 'grid';
 var project1Carousel = new Flickity('#project1-carousel', options);
 
 
