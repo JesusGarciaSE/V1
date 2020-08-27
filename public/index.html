@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Jesus Garcia | Software Engineer</title>
-    <script src="https://kit.fontawesome.com/9e69960a60.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./assets/icons/pandaicon.png">
-    <link rel="stylesheet" href="./flickity/flickity.min.css">
-    <link href="./styles.css" rel="stylesheet" />
-  </head>
-  <body>
-    <img height="500" width="500" class="logo" id="side-bar-icon" alt="Panda Logo" src="assets/icons/panda_white.png">
-    <nav>
-      <div id="side-bar">
-        <ul id="nav-list">
-          <li>
-            <h3>
-              Jesus Garcia
-            </h3>
-          </li>
-          <li>
-            <a href="#landing" class="nav-link">Home</a>
-          </li>
-          <li>
-            <a href="#about" class="nav-link">About</a>
-          </li>
-          <li>
-            <a href="#projects" class="nav-link">Projects</a>
-          </li>
-          <li>
-            <a href="#contact" class="nav-link">Contact</a>
-          </li>
-          <li>
-            <div class="themes">
-              <img loading="lazy" height="500" width="500" id="zero-one-theme" class="theme-icon" alt="Zero-One Theme" src="assets/icons/zero_one_icon.png" onclick="changeTheme('zero-one')"/>
-              <img loading="lazy" height="500" width="500" id="saber-theme" class="theme-icon" alt="Saber Theme" src="assets/icons/saber_icon.png" onclick="changeTheme('saber')"/>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Jesus Garcia | Software Engineer</title>
+  <script src="https://kit.fontawesome.com/9e69960a60.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./assets/icons/pandaicon.png">
+  <link rel="stylesheet" href="./flickity/flickity.min.css">
+  <link href="./styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <img height="500" width="500" class="logo" id="side-bar-icon" alt="Panda Logo" src="assets/icons/panda_white.png">
+  <nav>
+    <div id="side-bar">
+      <ul id="nav-list">
+        <li>
+          <h3>
+            Jesus Garcia
+          </h3>
+        </li>
+        <li>
+          <a href="#landing" class="nav-link">Home</a>
+        </li>
+        <li>
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li>
+          <a href="#projects" class="nav-link">Projects</a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+        <li>
+          <div class="themes">
+            <img loading="lazy" height="500" width="500" id="zero-one-theme" class="theme-icon" alt="Zero-One Theme"
+              src="assets/icons/zero_one_icon.png" onclick="changeTheme('zero-one')" />
+            <img loading="lazy" height="500" width="500" id="saber-theme" class="theme-icon" alt="Saber Theme"
+              src="assets/icons/saber_icon.png" onclick="changeTheme('saber')" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main>
     <section id="landing">
       <div>
-        <h2>Jesus Garcia</h1>
-        <h1>Software Engineer</h2>
-        <h2>West Texas Based</h3>
+        <h2>Jesus Garcia</h2>
+          <h1>Software Engineer</h1>
+        <h3>West Texas Based</h3>
       </div>
     </section>
     <section id="about">
@@ -52,15 +57,15 @@
         <div class="about-text">
           <h2>Who am I?</h2>
           <p>
-            Hello, my name's Jesus Garcia. I'm a software engineer based in 
-            Odessa, Texas. I have my masters in Computer Science from the 
-            University of Texas of the Permian Basin, and my Bachelor's in 
+            Hello, my name's Jesus Garcia. I'm a software engineer based in
+            Odessa, Texas. I have my masters in Computer Science from the
+            University of Texas of the Permian Basin, and my Bachelor's in
             Film and Digital Media from Baylor University.
           </p>
           <p>
-            I enjoy making things for the internet including websites mobile
-            applications, and anything inbetween! My goal is to continue 
-            learning and expand what I can do with web technologies.
+            I enjoy developing things for the internet including websites, mobile
+            applications, and anything in between! My goal is to continue
+            learning and further advance my skills.
           </p>
           <p>Here are a few of the technologies I've been working with recently:</p>
           <div class="skills">
@@ -76,16 +81,17 @@
             </ul>
           </div>
         </div>
-        <img loading="lazy" height="563" width="562" class="headshot" alt="Jesus Garcia Headshot" src="assets/jesus_cropped.jpg" />
+        <img loading="lazy" height="563" width="562" class="headshot" alt="Jesus Garcia Headshot"
+          src="assets/jesus_cropped.jpg" />
       </div>
     </section>
     <section id="projects">
       <div class="content">
         <div class="tab-buttons">
-          <div class="tab" onclick="openTab('project1')">
+          <div class="tab" id="tab1" onclick="openTab('project1', 'tab1')">
             <h2>Mobile Application</h2>
           </div>
-          <div class="tab" onclick="openTab('project2')">
+          <div class="tab" id="tab2" onclick="openTab('project2', 'tab2')">
             <h2>Website Update</h2>
           </div>
         </div>
@@ -96,21 +102,21 @@
           </div>
           <p class="project-description">
             This mobile application was intended to replace the traditional
-            paper ticketing system in place for J2 Acid Solutions LLC. The 
+            paper ticketing system in place for J2 Acid Solutions LLC. The
             original system involved a lot of redundant back and forth between
-            the field hand, office, and buyer. This made the paper tickets 
-            highly prone to field hand errors. This ticketing system minimized
-            user error by syncing with a online database and limiting what
-            information the field hands had access too and could change.            
+            the field hand, office, and buyer. This made the paper tickets
+            highly prone to costly errors. This ticketing system minimized
+            user error by syncing with an online database and limiting what
+            information could be changed.
           </p>
           <div class="tools">
             <h4>Tools Used</h4>
             <ul>
               <li>
-                <p>Ionic 4/5</p>
+                <p>Ionic 5</p>
               </li>
               <li>
-                <p>Angular 8/9</p>
+                <p>Angular 9</p>
               </li>
               <li>
                 <p>Firebase</p>
@@ -118,9 +124,12 @@
             </ul>
           </div>
           <div id="project1-carousel" class="carousel">
-            <img width="768" height="1025" class="slide-image" alt="Jesus Garcia" src="./assets/J2_App/j2app_img1.png"/>
-            <img width="768" height="1025" class="slide-image" alt="Jesus Garcia" src="./assets/J2_App/j2app_img2.png"/>
-            <img width="768" height="1025" class="slide-image" alt="Jesus Garcia" src="./assets/J2_App/j2app_img3.png"/>
+            <img width="768" height="1025" class="slide-image" alt="Jesus Garcia"
+              src="./assets/J2_App/j2app_img1.png" />
+            <img width="768" height="1025" class="slide-image" alt="Jesus Garcia"
+              src="./assets/J2_App/j2app_img2.png" />
+            <img width="768" height="1025" class="slide-image" alt="Jesus Garcia"
+              src="./assets/J2_App/j2app_img3.png" />
           </div>
         </div>
         <div id="project2" class="tab-content">
@@ -129,7 +138,7 @@
             <h5>Static to Custom</h5>
           </div>
           <p class="project-description">
-            J2 Acid Solution's original website was built hastily in a single 
+            J2 Acid Solution LLC's original website was built hastily in a single
             night using a generic website builder. At the owner's request, I
             updated their website into a custom mobile friendly website complete
             with daily news pulled from multiple sources.
@@ -150,9 +159,12 @@
             </ul>
           </div>
           <div id="project2-carousel" class="carousel">
-            <img width="768" height="1025" class="slide-image" alt="Jesus Garcia" src="./assets/J2_Website/j2acid_img1.png"/>
-            <img width="768" height="1025" class="slide-image" alt="Jesus Garcia" src="./assets/J2_Website/j2acid_img2.png"/>
-            <img width="768" height="1025" class="slide-image" alt="Jesus Garcia" src="./assets/J2_Website/j2acid_img3.png"/>
+            <img width="768" height="1025" class="slide-image" alt="Jesus Garcia"
+              src="./assets/J2_Website/j2acid_img1.png" />
+            <img width="768" height="1025" class="slide-image" alt="Jesus Garcia"
+              src="./assets/J2_Website/j2acid_img2.png" />
+            <img width="768" height="1025" class="slide-image" alt="Jesus Garcia"
+              src="./assets/J2_Website/j2acid_img3.png" />
           </div>
         </div>
       </div>
@@ -163,12 +175,12 @@
           <h2>Contact</h2>
           <p>
             I'd love to hear from you, even if it's just to say "Hello!". Please
-            feel free to reach out to me through any of the platforms below and 
+            feel free to reach out to me through any of the platforms below and
             I'll do my best to get back to you as soon as I can!
           </p>
           <p>
             <a class="external-link" href="mailto:Jesus.R.GarciaSE@gmail.com">
-              <i class="fas fa-envelope-open" aria-hidden="true"></i> 
+              <i class="fas fa-envelope-open" aria-hidden="true"></i>
               &emsp;Jesus.R.GarciaSE@gmail.com
             </a>
           </p>
@@ -181,7 +193,12 @@
         </div>
       </div>
     </section>
-  </body>
-  <script type="text/javascript" src="./flickity/flickity.pkgd.min.js"></script>
-  <script type="text/javascript" src="main.js"></script>
+  </main>
+  <footer>
+    <a class="external-link" href="https://github.com/JesusGarciaSE/V1">Designed & Built by Jesus Garcia 2020</a>
+  </footer>
+</body>
+<script type="text/javascript" src="./flickity/flickity.pkgd.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
 </html>

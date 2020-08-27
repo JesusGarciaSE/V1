@@ -1,7 +1,8 @@
 var menuButton = document.getElementById('side-bar-icon');
 var menu = document.getElementById('side-bar');
 var navLinks = document.getElementsByClassName('nav-link');
-var tabs = document.getElementsByClassName('tab-content');
+var tabs = document.getElementsByClassName('tab');
+var tabContents = document.getElementsByClassName('tab-content');
 var options = {
     wrapAround: true,
     prevNextButtons: false
@@ -20,16 +21,19 @@ for(const link of navLinks) {
 };
 
 // Change selected tab to display grid and all other to display none
-function openTab(projectNo) {
-    for (const tab of tabs) {
-        tab.style.display = 'none';
+function openTab(projectNo, tabNo) {
+    for (i = 0; i < tabs.length; i++) {
+        tabs[i].removeAttribute('style');
+        tabContents[i].style.display = 'none';
     }
+    document.getElementById(tabNo).style.color = 'var(--primary)';
     document.getElementById(projectNo).style.display = 'grid';
     var flkty = new Flickity(`#${projectNo}-carousel`, options);
     flkty.resize();
 }
 // Set initial tab-content to display grid and initialize carousel
 document.getElementById('project1').style.display = 'grid';
+document.getElementById('tab1').style.color = 'var(--primary)';
 var project1Carousel = new Flickity('#project1-carousel', options);
 
 // Change theme css variables

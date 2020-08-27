@@ -92,6 +92,16 @@ ul li::before {
   color: var(--primary);
 }
 
+footer {
+  height: 20px;
+  text-align: center;
+}
+
+footer a {
+  font-size: 15px;
+  padding: 1rem 0;
+}
+
 /* Nav */
 #side-bar-icon {
   cursor: pointer;
