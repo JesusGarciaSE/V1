@@ -76,18 +76,15 @@ ul {
   line-height: 1.5;
   letter-spacing: 2px;
 }
-ul li {
-  position: relative;
-}
 
 ul li::before {
   content: '';
-  position: absolute;
-  top: 20%;
-  left: -15px;
-  border-top: 8px solid transparent;
-  border-left: 8px solid var(--primary);
-  border-bottom: 8px solid transparent;
+  display: inline-block;
+  line-height: 1.5;
+  margin: 5px 5px 0 2px;
+  border-top: 5px solid transparent;
+  border-left: 5px solid var(--primary);
+  border-bottom: 5px solid transparent;
   color: var(--primary);
 }
 
@@ -194,24 +191,34 @@ footer a {
 } 
 
 /* About */
+.about-flex {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.headshot-wrapper {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
 .headshot {
   display: block;
   width: min(50%, 281px);
   height: auto;
-  margin: 2.5rem auto 0 auto;
   border-radius: 100%;
 }
 
 .about-text {
-  padding-top: 3.5rem;
-  margin: 0 10vw;
+  width: 80%;
+  margin: auto;
 }
 
 .skills {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 15ch);
+  margin-top: 1rem;
   justify-content: space-evenly;
 }
 
@@ -260,10 +267,6 @@ footer a {
 .tools {
   grid-area: 3 / 1 / 4 / 2;
   margin: 0 20%;
-}
-
-.tools li {
-  margin-left: 1rem;
 }
 
 .carousel {
@@ -318,6 +321,19 @@ footer a {
   .content {
     width: 80%;
   }
+
+  .about-text {
+    width: 60%;
+    margin: unset;
+  }
+
+  .headshot-wrapper {
+    width: 40%;
+  }
+
+  .headshot {
+    width: 281px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -326,6 +342,22 @@ footer a {
     left: -30vw;
   }
 
+    /* About */
+
+  .about-text {
+    width: 60%;
+    margin: unset;
+  }
+
+  .headshot-wrapper {
+    width: 40%;
+  }
+
+  .headshot {
+    width: 300px;
+  }
+
+  /* Projects */
   .tab-content {
     row-gap: 1.5rem;
     grid-template-columns: 70% 30%;
